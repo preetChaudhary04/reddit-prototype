@@ -1,10 +1,12 @@
+import { useRef } from 'react';
 import logo from '../assets/Reddit_Logo.webp'
 import { BsThreeDots } from "react-icons/bs";
+import { FaBars } from "react-icons/fa6";
 
 const Header = () => {
+
   return (
     <div className='main-header'>
-
       <a className="logo-section">
         <img height="32px" width="32px" src={logo} alt="logo" />
         <p>reddit</p>
