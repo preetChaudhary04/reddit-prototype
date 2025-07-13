@@ -19,7 +19,7 @@ const Header = () => {
       </div>
       <div className="login-section">
         <button type="button" className="btn btn-app">Sign Up</button>
-        <button type="button" className="btn btn-login">Log In</button>
+        <button type="button" className="btn btn-login">LogIn</button>
         <div className="settings"> <BsThreeDots /> </div>
       </div>
     </div>
