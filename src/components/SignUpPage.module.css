@@ -1,0 +1,112 @@
+.mainContainer {
+  width: 33rem !important;
+  height: 100vh;
+  background-color: #181C1F;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2.5rem 4rem !important;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+a {
+  text-decoration: none;
+  color: #648EFC
+}
+
+.TextAlignLeft {
+  text-align: left;
+}
+
+.backButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  top: 20px;
+  right: 20px;
+}
+
+.backButton:hover {
+  cursor: pointer;
+  background-color: #333D42;
+  color: #B7CAD4;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content h3 {
+  font-weight: 500;
+}
+
+.content p {
+  color: #B7CAD4;
+  padding: 0 1rem;
+  font-size: 14px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buttonOptions {
+  background-color: #fff !important;
+  /* font-size: 14px; */
+  color: #181C1F !important;
+  border-radius: 40px !important;
+}
+
+.emailInput {
+  background-color: #333D42;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  height: 3rem;
+  padding: 0 10px;
+  color: #ffffff !important;
+}
+
+.continueButton {
+  color: #766d71 !important;
+  background-color: #333D42;
+  font-weight: 600;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  height: 45px;
+  padding: 0 10px;
+}
+
+.continueButton:hover {
+  background-color: #AE2C00;
+  color: #fff !important;
+}
+
+/*----- Media Querries -----*/
+
+
+/*----- Extra Small Devices (0 to 576px) -----*/
+
+@media (max-width: 576px) {
+  .mainContainer {
+    width: 95% !important;
+    padding: 2rem 2rem 3rem 2rem !important;
+    height: 100vh;
+  }
+}

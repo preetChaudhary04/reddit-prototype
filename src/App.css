@@ -5,10 +5,23 @@
   box-sizing: border-box;
 }
 
+.displayNone {
+  display: none !important;
+}
+
 .main {
   min-height: 100vh;
+  height: fit-content;
   position: relative;
   background-color: #0E1113;
+}
+
+.main-body {
+  height: fit-content;
+  position: relative;
+  background-color: #0E1113;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex {
@@ -22,13 +35,29 @@
 .main-header {
   padding: 0 30px;
   display: flex;
-  justify-content: space-around;
-  min-height: 15vh;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 12vh;
   background-color: #0E1113;
   border-bottom: 1px solid #2A3236;
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.sidebar-opener {
+  display: flex;
+  margin-right: 7px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-opener:hover {
+  background-color: #2A3236;
+  cursor: pointer;
 }
 
 .logo-section {
@@ -113,15 +142,27 @@
 /* ----- Sidebar ----- */
 
 .main-sidebar {
-  display: inline-block;
-  position: fixed;
+  position: relative;
   left: 0;
-  top: 15vh;
-  width: 13rem;
+  width: 20%;
   height: 85vh;
   background-color: #0E1113;
-  border-right: 1px solid #2A3236;
-  overflow-y: auto;
+}
+
+.main-sidebar .sidebar-options {
+  position: fixed;
+}
+
+/* .main-sidebar .hr {
+  position: fixed;
+  bottom: 1rem;
+  padding-bottom: 30px;
+} */
+
+.main-sidebar .dropdown {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
 }
 
 .sidebar-logos {
@@ -140,13 +181,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #0E1113;
+  margin: 0 auto;
   padding: 20px;
   display: inline-block;
-  margin-left: 200px;
-  width: calc(100% - 200px);
   overflow-y: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  border-left: 1px solid #2A3236;
 }
 
 .postlist-container::-webkit-scrollbar {
@@ -207,21 +248,39 @@
 /* ----- Create Post ----- */
 
 
-
-.main-createpost {
-  margin: 20px;
-  background-color: #1d2022;
-  padding: 20px;
-  display: inline-block;
-  width: 70vw;
-  margin: 20px 20px 20px 16rem;
-  border-radius: 5px;
-}
-
 .form-wrapper {
   min-height: 85vh;
+  padding: 20px;
+  border-left: 1px solid #2A3236;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.main-createpost {
+  background-color: #1d2022;
+  height: 60vh;
+  padding: 20px;
+  width: 45rem;
+  border-radius: 5px;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
 
 
+
+
+@media (min-width: 576px) {
+  .sidebar-opener {
+    display: none;
+  }
+
+  /* .logo-section p {
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 8px;
+  } */
+}
